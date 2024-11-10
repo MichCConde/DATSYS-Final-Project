@@ -15,7 +15,7 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
     }
     // Check credentials for user
     else if (username === userCredentials.username && password === userCredentials.password) {
-        window.location.href = "../user/user.html";  // Redirect to an empty user page
+        window.location.href = "../user/home.html";  // Redirect to an empty user page
     } else {
         // Display error if the credentials do not match
         document.getElementById("error-message").textContent = "Invalid username or password. Please try again.";

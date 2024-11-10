@@ -3,14 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Page</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Hotel Reservation</title>
+    <link rel="stylesheet" href="userstyle.css">
 </head>
 <body>
-    <!-- This page is intentionally empty -->
-    <div class="user-dashboard">
-        <h1>Welcome User</h1>
-        <p>yawa.</p>
+
+    <div class="booking-container">
+        <h1>Hotel Reservation</h1>
+        
+        <!-- Reservation Form -->
+        <form class="reservation-form">
+            <div class="form-group">
+                <label for="checkin-date">Check-in Date:</label>
+                <input type="date" id="checkin-date" name="checkin">
+            </div>
+
+            <div class="form-group">
+                <label for="checkout-date">Check-out Date:</label>
+                <input type="date" id="checkout-date" name="checkout">
+            </div>
+
+            <div class="form-group">
+                <label for="guests">Number of Guests:</label>
+                <select id="guests" name="guests">
+                    <option value="1">1 Guest</option>
+                    <option value="2">2 Guests</option>
+                    <option value="3">3 Guests</option>
+                    <option value="4">4 Guests</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="room-type">Room Type:</label>
+                <select id="room-type" name="room-type">
+                    <option value="standard">Standard</option>
+                    <option value="deluxe">Deluxe</option>
+                    <option value="suite">Suite</option>
+                </select>
+            </div>
+
+            <button type="submit" class="reserve-btn">Check Availability</button>
+        </form>
+
+        <!-- Booking Summary Section -->
+        <div class="booking-summary">
+            <h2>Booking Summary</h2>
+            <p><strong>Check-in:</strong> <span id="summary-checkin">-</span></p>
+            <p><strong>Check-out:</strong> <span id="summary-checkout">-</span></p>
+            <p><strong>Guests:</strong> <span id="summary-guests">-</span></p>
+            <p><strong>Room Type:</strong> <span id="summary-room">-</span></p>
+            <p><strong>Total Price:</strong> <span id="summary-price">$0.00</span></p>
+        </div>
     </div>
+
+    <script src="userscript.js"></script>
 </body>
 </html>
