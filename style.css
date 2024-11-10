@@ -1,88 +1,73 @@
+/* Reset default margins and paddings */
 * {
-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: "Lato", sans-serif;
-    transition: background-color .5s;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    height: 100vh; /* Full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full screen height */
+    width: 100%; /* Full width */
 }
 
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
+.login-box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px; /* Set a fixed width for the login box */
 }
 
-.sidenav a:hover {
-    color: #f1f1f1;
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
 }
 
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+.textbox {
+    margin: 10px 0;
 }
 
-.sidenav-default {
-    height: 100vh;
-    width: 0;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    transition: 0.5s;
-    visibility: visible;
-    float: left;
-    width: 5%;
-    padding: 20px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-
-.sidenav-default a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-
-#defaultSidebar {
-    transition: margin-left .5s;
-    padding: 16px;
-}
-#main {
-    float: left;
-    padding: 20px;
-    width: 90%;
-    transition: margin-left .5s;
-    padding: 16px;
-}
-
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-}
-@media (max-width: 600px) {
-nav, article {
+.textbox input {
     width: 100%;
-    height: auto;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
 }
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #2D7454;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Add transition for background-color and scaling */
+}
+
+.btn:hover {
+    background-color: #5FA755;
+    transform: scale(1.05); /* Slight scale-up effect on hover */
+}
+
+p {
+    font-size: 14px;
+    color: red;
 }
